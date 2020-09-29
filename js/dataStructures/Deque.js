@@ -1,4 +1,4 @@
-class Deque {
+export default class Deque {
     constructor() {
         this.count = 0;
         this.lowestCount = 0;
@@ -84,38 +84,3 @@ class Deque {
         return objString;
     }
 }
-
-// Palindrome checker
-function palindromeChecker(aString) {
-    if (aString === undefined || aString === null ||
-    (aString !== null && aString.length === 0)) {
-        return false;
-    }
-    const deque = new Deque();
-    const lowerString = aString.toLocaleLowerCase().split(' ').join('');
-
-    let isEqual = true;
-    let firstChar, lastChar;
-
-    // Fill the deque with cleaned aString
-    for (let i = 0; i < lowerString.length; i++) {
-        deque.addBack(lowerString.charAt(i));
-    }
-
-    while (deque.size() > 1 && isEqual) {
-        firstChar = deque.removeFront();
-        lastChar = deque.removeBack();
-
-        if (firstChar !== lastChar) {
-            isEqual = false;
-        }
-    }
-
-    return isEqual;
-}
-
-console.log('a', palindromeChecker('a')); // true
-console.log('Colin', palindromeChecker('Colin')); // false
-console.log('rotor', palindromeChecker('rotor')); // false
-console.log('aa', palindromeChecker('aa')); //true
-

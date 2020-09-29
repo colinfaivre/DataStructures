@@ -1,4 +1,4 @@
-class Stack {
+export default class Stack {
     constructor() {
         this._count = 0;
         this._items = {};
@@ -52,29 +52,3 @@ class Stack {
         return objString;
     }
 }
-
-function decimalToBinary(decimalNumber) {
-    const reminderStack = new Stack();
-    let number = decimalNumber;
-    let reminder;
-    let binaryString = '';
-
-    while (number > 0) {
-        reminder = Math.floor(number % 2);
-        reminderStack.push(reminder);
-        number = Math.floor(number / 2);
-    }
-
-    while (!reminderStack.isEmpty()) {
-        binaryString += reminderStack.pop().toString();
-    }
-
-    return binaryString;
-}
-
-// console.log(decimalToBinary(10000));
-
-
-
-
-

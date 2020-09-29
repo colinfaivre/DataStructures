@@ -1,4 +1,4 @@
-class Queue {
+export default class Queue {
     constructor() {
         this.count = 0;
         this.lowestCount = 0;
@@ -57,34 +57,3 @@ class Queue {
         return objString;
     }
 }
-
-// Hot patato game
-function hotPatato(elementsList, num) {
-    const queue = new Queue();
-    const eleminatedList = [];
-
-    for (let i = 0; i < elementsList.length; i++) {
-        queue.enqueue(elementsList[i]);
-    }
-
-    while (queue.size() > 1) {
-        for (let i = 0; i < num; i++) {
-            queue.enqueue(queue.dequeue());
-        }
-        eleminatedList.push(queue.dequeue());
-    }
-
-    return {
-        eleminated: elementsList,
-        winner: queue.dequeue(),
-    };
-}
-
-const names = ['John', 'Jack', 'Camilia', 'Ingrid', 'Carl'];
-const result = hotPatato(names, 10);
-
-result.eleminated.forEach(name => {
-    console.log(`${name} was eliminated from the Hot patato game.`);
-});
-
-console.log(`The winner is ${result.winner}`);
