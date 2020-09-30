@@ -93,4 +93,10 @@ import LinkedList from './dataStructures/LinkedList.js';
 const list = new LinkedList();
 list.push(15);
 list.push(10);
-console.log(list);
+list.push(10);
+list.push(100);
+list.insert(500, 2);
+list.remove(10);
+console.log(list.getHead());
+
+console.log(list.toString());
