@@ -2,6 +2,9 @@ import Stack from './dataStructures/Stack.js';
 import Queue from './dataStructures/Queue.js';
 import Deque from './dataStructures/Deque.js';
 import LinkedList from './dataStructures/LinkedList.js';
+import SortedLinkedList from './dataStructures/SortedLinkedList.js';
+import DoublyLinkedList from './dataStructures/DoublyLinkedList.js';
+import CircularLinkedList from './dataStructures/CircularLinkedList.js'
 
 // STACK : DECIMAL TO BINARY
 // function decimalToBinary(decimalNumber) {
