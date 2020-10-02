@@ -93,13 +93,13 @@ import CircularLinkedList from './dataStructures/CircularLinkedList.js'
 // console.log('rotor', palindromeChecker('rotor')); // false
 // console.log('aa', palindromeChecker('aa')); //true
 
-const list = new LinkedList();
-list.push(15);
-list.push(10);
-list.push(10);
-list.push(100);
-list.insert(500, 2);
-list.remove(10);
-console.log(list.getHead());
+// const list = new LinkedList();
+// list.push(15);
+// list.push(10);
+// list.push(10);
+// list.push(100);
+// list.insert(500, 2);
+// list.remove(10);
+// console.log(list.getHead());
 
-console.log(list.toString());
+// console.log(list.toString());
