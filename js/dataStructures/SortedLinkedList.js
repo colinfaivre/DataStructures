@@ -2,8 +2,8 @@ import { defaultEquals } from './util.js';
 import LinkedList from './LinkedList.js';
 
 const Compare = {
-    LESS_THAN = -1,
-    GREATER_THAN = 1,
+    LESS_THAN: -1,
+    GREATER_THAN: 1,
 };
 
 function defaultCompare(a, b) {

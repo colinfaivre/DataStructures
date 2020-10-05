@@ -4,7 +4,10 @@ import Deque from './dataStructures/Deque.js';
 import LinkedList from './dataStructures/LinkedList.js';
 import SortedLinkedList from './dataStructures/SortedLinkedList.js';
 import DoublyLinkedList from './dataStructures/DoublyLinkedList.js';
-import CircularLinkedList from './dataStructures/CircularLinkedList.js'
+import CircularLinkedList from './dataStructures/CircularLinkedList.js';
+import Set from './dataStructures/Set.js';
+import Dictionary from './dataStructures/Dictionary.js';
+import HashTable from './dataStructures/HashTable.js';
 
 // STACK : DECIMAL TO BINARY
 // function decimalToBinary(decimalNumber) {
@@ -103,3 +106,52 @@ import CircularLinkedList from './dataStructures/CircularLinkedList.js'
 // console.log(list.getHead());
 
 // console.log(list.toString());
+
+
+
+// SET
+
+// const setA = new Set();
+// setA.add(1);
+// setA.add(2);
+// setA.add(3);
+// setA.add(4);
+// setA.add(5);
+
+// const setB = new Set();
+// setB.add(4);
+// setB.add(5);
+
+// console.log(setB.isSubsetOf(setA));
+
+
+
+// DICTIONARY
+
+// const dictionary = new Dictionary();
+// dictionary.set('Gandalf', 'gandalf@email.com');
+// dictionary.set('John', 'john@email.com');
+// dictionary.set('Tyrion', 'tyrion@email.com');
+
+// console.log(dictionary.hasKey('Gandalf'));
+// console.log(dictionary.keys());
+// console.log(dictionary.get('Gandalf'));
+
+// dictionary.remove('John');
+// console.log(dictionary.keyValues());
+
+// dictionary.forEach((k, v) => {
+//     console.log('forEach: ', `key: ${k}, value: ${v}`);
+// })
+
+
+
+// HASH TABLE
+
+const hash = new HashTable();
+hash.put('Gandalf', 'gandalf@email.com');
+hash.put('John', 'johnsnow@email.com');
+hash.put('Tyrion', 'tyrion@email.com');
+
+console.log(hash.hashCode('Gandalf') + ' - Gandalf');
+console.log(hash.get('John'));
