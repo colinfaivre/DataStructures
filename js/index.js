@@ -8,6 +8,7 @@ import CircularLinkedList from './dataStructures/CircularLinkedList.js';
 import Set from './dataStructures/Set.js';
 import Dictionary from './dataStructures/Dictionary.js';
 import HashTable from './dataStructures/HashTable.js';
+import BinarySearchTree from './dataStructures/BinarySearchTree.js';
 
 // STACK : DECIMAL TO BINARY
 // function decimalToBinary(decimalNumber) {
@@ -160,52 +161,72 @@ import HashTable from './dataStructures/HashTable.js';
 
 // RECURSION
 
-function factorialIterative(number) {
-    if (number < 0) return undefined;
+// function factorialIterative(number) {
+//     if (number < 0) return undefined;
 
-    let total = 1;
-    for (let n = number; n > 1; n--) {
-        total *= n;
-    }
+//     let total = 1;
+//     for (let n = number; n > 1; n--) {
+//         total *= n;
+//     }
 
-    return total;
-}
+//     return total;
+// }
 
-console.log(factorialIterative(10));
+// console.log(factorialIterative(10));
 
-function factorial(n) {
-    if (n === 1 || n === 0) {
-        return 1;
-    }
+// function factorial(n) {
+//     if (n === 1 || n === 0) {
+//         return 1;
+//     }
 
-    return n * factorial(n - 1)
-}
-console.log(factorial(9));
+//     return n * factorial(n - 1)
+// }
+// console.log(factorial(9));
 
-function fibonacciIterative(n) {
-    if (n < 1) return 0;
-    if (n <= 2) return 1;
+// function fibonacciIterative(n) {
+//     if (n < 1) return 0;
+//     if (n <= 2) return 1;
 
-    let fibNMinus2 = 0;
-    let fibNMinus1 = 1;
-    let fibN = n;
+//     let fibNMinus2 = 0;
+//     let fibNMinus1 = 1;
+//     let fibN = n;
 
-    for (let i = 2; i <= n; i++) {
-        fibN = fibNMinus1 + fibNMinus2;
-        fibNMinus2 = fibNMinus1;
-        fibNMinus1 = fibN;
-    }
+//     for (let i = 2; i <= n; i++) {
+//         fibN = fibNMinus1 + fibNMinus2;
+//         fibNMinus2 = fibNMinus1;
+//         fibNMinus1 = fibN;
+//     }
 
-    return fibN;
-}
+//     return fibN;
+// }
 
-console.log(fibonacciIterative(9));
+// console.log(fibonacciIterative(9));
 
-function fibonacci(n) {
-    if (n < 1) return 0;
-    if (n <= 2) return 1;
+// function fibonacci(n) {
+//     if (n < 1) return 0;
+//     if (n <= 2) return 1;
 
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
+//     return fibonacci(n - 1) + fibonacci(n - 2);
+// }
 
-console.log(fibonacci(10));
+// console.log(fibonacci(10));
+
+
+
+// BINARY SEARCH TREE
+
+const tree = new BinarySearchTree();
+tree.insert(11);
+tree.insert(15);
+tree.insert(7);
+tree.insert(2);
+tree.insert(9);
+tree.insert(20);
+tree.insert(24);
+tree.insert(14);
+tree.insert(10);
+tree.insert(3);
+console.log(tree.root);
+
+const printNode = (value) => console.log(value);
+tree.postOrderTraverse(printNode);
