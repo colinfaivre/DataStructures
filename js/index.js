@@ -229,4 +229,6 @@ tree.insert(3);
 console.log(tree.root);
 
 const printNode = (value) => console.log(value);
-tree.postOrderTraverse(printNode);
+tree.inOrderTraverse(printNode);
+
+console.log(tree.search(1) ? 'Key 1 found' : 'Key 1 not found');
