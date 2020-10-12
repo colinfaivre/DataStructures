@@ -9,6 +9,8 @@ import Set from './dataStructures/Set.js';
 import Dictionary from './dataStructures/Dictionary.js';
 import HashTable from './dataStructures/HashTable.js';
 import BinarySearchTree from './dataStructures/BinarySearchTree.js';
+import AVLTree from './dataStructures/AVLTree.js';
+
 
 // STACK : DECIMAL TO BINARY
 // function decimalToBinary(decimalNumber) {
