@@ -20,7 +20,7 @@ export const Compare = {
 };
 
 export function defaultCompare(a, b) {
-    if (a ===b) {
+    if (a === b) {
         return 0;
     }
 

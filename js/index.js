@@ -10,6 +10,7 @@ import Dictionary from './dataStructures/Dictionary.js';
 import HashTable from './dataStructures/HashTable.js';
 import BinarySearchTree from './dataStructures/BinarySearchTree.js';
 import AVLTree from './dataStructures/AVLTree.js';
+import MinHeap from './dataStructures/MinHeap.js';
 
 
 // STACK : DECIMAL TO BINARY
@@ -217,20 +218,39 @@ import AVLTree from './dataStructures/AVLTree.js';
 
 // BINARY SEARCH TREE
 
-const tree = new BinarySearchTree();
-tree.insert(11);
-tree.insert(15);
-tree.insert(7);
-tree.insert(2);
-tree.insert(9);
-tree.insert(20);
-tree.insert(24);
-tree.insert(14);
-tree.insert(10);
-tree.insert(3);
-console.log(tree.root);
+// const tree = new BinarySearchTree();
+// tree.insert(11);
+// tree.insert(15);
+// tree.insert(7);
+// tree.insert(2);
+// tree.insert(9);
+// tree.insert(20);
+// tree.insert(24);
+// tree.insert(14);
+// tree.insert(10);
+// tree.insert(3);
+// console.log(tree.root);
 
-const printNode = (value) => console.log(value);
-tree.inOrderTraverse(printNode);
+// const printNode = (value) => console.log(value);
+// tree.inOrderTraverse(printNode);
 
-console.log(tree.search(1) ? 'Key 1 found' : 'Key 1 not found');
+// console.log(tree.search(1) ? 'Key 1 found' : 'Key 1 not found');
+
+
+
+// BINARY HEAP
+
+const heap = new MinHeap();
+
+heap.insert(2);
+heap.insert(3);
+heap.insert(4);
+heap.insert(5);
+heap.insert(1);
+
+
+console.log(heap);
+
+console.log('Heap size :', heap.size());
+console.log('Heap is empty :', heap.isEmpty());
+console.log('Heap min value :', heap.findMinimum());
