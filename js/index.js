@@ -11,7 +11,7 @@ import HashTable from './dataStructures/HashTable.js';
 import BinarySearchTree from './dataStructures/BinarySearchTree.js';
 import AVLTree from './dataStructures/AVLTree.js';
 import MinHeap from './dataStructures/MinHeap.js';
-
+import Graph from './dataStructures/Graph.js';
 
 // STACK : DECIMAL TO BINARY
 // function decimalToBinary(decimalNumber) {
@@ -240,17 +240,45 @@ import MinHeap from './dataStructures/MinHeap.js';
 
 // BINARY HEAP
 
-const heap = new MinHeap();
+// const heap = new MinHeap();
 
-heap.insert(2);
-heap.insert(3);
-heap.insert(4);
-heap.insert(5);
-heap.insert(1);
+// heap.insert(2);
+// heap.insert(3);
+// heap.insert(4);
+// heap.insert(5);
+// heap.insert(1);
 
 
-console.log(heap);
+// console.log(heap);
 
-console.log('Heap size :', heap.size());
-console.log('Heap is empty :', heap.isEmpty());
-console.log('Heap min value :', heap.findMinimum());
+// console.log('Heap size :', heap.size());
+// console.log('Heap is empty :', heap.isEmpty());
+// console.log('Heap min value :', heap.findMinimum());
+
+
+
+
+// GRAPH
+
+const graph = new Graph();
+
+const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+
+for(let i = 0; i < myVertices.length; i++) {
+    graph.addVertex(myVertices[i]);
+}
+
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('A', 'D');
+graph.addEdge('C', 'D');
+graph.addEdge('C', 'G');
+graph.addEdge('D', 'G');
+graph.addEdge('D', 'H');
+graph.addEdge('B', 'E');
+graph.addEdge('B', 'F');
+graph.addEdge('E', 'I');
+
+console.log(graph.toString());
+
+
